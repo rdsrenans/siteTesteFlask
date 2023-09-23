@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste</title>
+    <style>
+        table, th, td{
+            border: 1px solid;
+            border-collapse: collapse;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <h3> Este é o trabalho de entrega do desafio da DIO: "Criando uma API com Flask no Ambiente COLAB</h3>
+
+        <h1> Tabela de dados de Clientes</h1>
+        <table>
+            <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Country</th>
+            </tr>
+            {% for linha in lista %}
+                <tr>
+                    <td>{{ linha.number }}</td>
+                    <td>{{ linha.name }}</td>
+                    <td>{{ linha.age }}</td>
+                    <td>{{ linha.city }}</td>
+                    <td>{{ linha.country }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+    <p>Clique no <a href="/dados">link</a> para ver os dados em JSON.</p>
+</body>
+</html>
